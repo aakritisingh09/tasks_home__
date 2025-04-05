@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "get-pharma-papers"
+version = "0.1.0"
+description = "Fetches PubMed papers with pharmaceutical/biotech affiliations."
+authors = ["Aakriti Singh <singhaakriti225@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "get_pharma_papers" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+biopython = "^1.81"
+requests = "^2.31.0"
+csv = "^1.0"
+click = "^8.1.7"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.1"
+flake8 = "^6.0.0"
+mypy = "^1.7.1"
+
+[tool.poetry.scripts]
+get-papers-list = "get_pharma_papers.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
